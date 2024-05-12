@@ -1,0 +1,22 @@
+body {
+    font-family: 'Quattrocento', serif;
+    line-height: 1.6;
+    margin: 0;
+    position: relative;
+    padding: 0;
+    background-image: linear-gradient(rgba(244, 230, 230, 0.863), rgba(255, 255, 255, 0.772)), url('Images/background.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+  }
+  
+
+#logo {
+    position: inherit;
+    top: 10px;
+    left: 18px; 
+    height: 116px; 
+    width: auto; 
+}
+
