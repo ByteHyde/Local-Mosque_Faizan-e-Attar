@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <script src="Logic.js"></script>  
-  <link rel="icon" type="image/x-icon" href="Images\icoin.png">
+  <link rel="icon" type="image/x-icon" href="Images/icoin.png">
   <title>Faizan-e-Attar Musallah</title>
 </head>
 <body>
@@ -21,43 +25,90 @@
       </div>
       <div id="clock"></div>
     </div>
-    <nav class="nav-container">
-      <ul class="nav-list">
-        <li><a href="#">Home</a></li>
-        <li class="dropdown">
-          <a href="#">About Us</a>
-          <ul class="dropdown-content">
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Services</a>
-          <ul class="dropdown-content">
-            <li><a href="#">Weekly Ijtema</a></li>
-            <li><a href="#">Eid prayer</a></li>
-            <li class="dropdown">
-              <a href="#">More Info</a>
-              <ul class="dropdown-content">
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">This month expense</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
   </header>
 
+  <nav class="nav-container">
+    <ul class="nav-list">
+      <li><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a href="#">About Us</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Services</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Weekly Ijtema</a></li>
+          <li><a href="#">Eid prayer</a></li>
+          <li class="dropdown-submenu">
+            <a href="#">More Info</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">This month expense</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-
-
-
-
-
-
-
+  <main>
+    <div class="timetable-container">
+      <h2>Prayer Times</h2>
+      <div class="date-container">
+        <div id="gregorian-date">May 16, 2024</div>
+        <div id="islamic-date">8 Dhū al-Qaʿda 1445</div>
+      </div>
+      <div class="next-prayer-container">
+        <div id="next-prayer">Fajr Iqamah</div>
+        <div id="next-prayer-time">4:45 am</div>
+        <div id="time-left">1 HOURS 24 minutes</div>
+      </div>
+      <table class="prayer-table">
+        <tr>
+          <th>Prayer</th>
+          <th>Athan</th>
+          <th>Iqamah</th>
+        </tr>
+        <tr>
+          <td>Fajr</td>
+          <td>3:42 am</td>
+          <td>4:45 am</td>
+        </tr>
+        <tr>
+          <td>Sunrise</td>
+          <td>5:41 am</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Dhuhr</td>
+          <td>1:26 pm</td>
+          <td>2:00 pm</td>
+        </tr>
+        <tr>
+          <td>Asr</td>
+          <td>5:37 pm</td>
+          <td>6:00 pm</td>
+        </tr>
+        <tr>
+          <td>Maghrib</td>
+          <td>9:12 pm</td>
+          <td>9:22 pm</td>
+        </tr>
+        <tr>
+          <td>Isha</td>
+          <td>11:00 pm</td>
+          <td>11:05 pm</td>
+        </tr>
+        <tr>
+          <td>Jumuah</td>
+          <td>1:45 pm</td>
+          <td>3:45 pm</td>
+        </tr>
+      </table>
+    </div>
+  </main>
 </body>
 </html>
-
-
