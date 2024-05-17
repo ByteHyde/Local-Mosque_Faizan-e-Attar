@@ -5,13 +5,18 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-10px);
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-12px);
   }
 }
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
 .preloader {
   position: fixed;
@@ -23,9 +28,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   z-index: 9999; 
   transition: opacity 1s ease; 
 }
+
+.preloader-text {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #333; 
+  opacity: 0; 
+  animation: fadeIn 2s ease-in-out forwards; 
+  text-align: center;
+}
+
+
 
 .preloader.fade-out {
   opacity: 0;
@@ -279,4 +297,32 @@ main {
 
 .prayer-table tr:hover {
   background-color: #ddd;
+}
+
+/* .map-text {
+  color: rgb(255, 234, 0);
+} */
+
+.map-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  box-shadow: #16181b;
+}
+
+.map-container {
+  border: 2px solid #ddd;
+  padding: 10px;
+  width: 950px; 
+  background-color: #f9f9f9;
+}
+
+.footer-data{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004589;
+  color: white;
+  padding: 10px 20px;
 }
