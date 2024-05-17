@@ -70,7 +70,7 @@ header {
 
 .nav-list a {
   color: #333; 
-  text-decoration: none;
+  text-decoration: none  ;
   font-weight: bold;
   font-size: 1.2rem; 
   padding: 10px 15px; 

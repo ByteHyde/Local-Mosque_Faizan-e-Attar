@@ -9,6 +9,6 @@ function updateClock() {
     var timeString = hours + ':' + minutes + ':' + seconds;
     document.getElementById('clock').innerHTML = timeString;
   }
-  setInterval(updateClock, 1000);
+  setInterval(updateClock, 1000); 
   updateClock(); 
 
