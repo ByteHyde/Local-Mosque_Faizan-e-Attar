@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Admin Page - Prayer Times</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 600px;
+      margin-top: 50px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5">Admin Page - Enter Prayer Times</h1>
+    <form id="prayerTimesForm">
+      <div class="form-group">
+        <label for="fajr">Fajr</label>
+        <input type="time" class="form-control" id="fajr" required>
+      </div>
+      <div class="form-group">
+        <label for="sunrise">Sunrise</label>
+        <input type="time" class="form-control" id="sunrise" required>
+      </div>
+      <div class="form-group">
+        <label for="dhuhr">Dhuhr</label>
+        <input type="time" class="form-control" id="dhuhr" required>
+      </div>
+      <div class="form-group">
+        <label for="asr">Asr</label>
+        <input type="time" class="form-control" id="asr" required>
+      </div>
+      <div class="form-group">
+        <label for="maghrib">Maghrib</label>
+        <input type="time" class="form-control" id="maghrib" required>
+      </div>
+      <div class="form-group">
+        <label for="isha">Isha</label>
+        <input type="time" class="form-control" id="isha" required>
+      </div>
+      <div class="form-group">
+        <label for="jumuah">Jumuah</label>
+        <input type="time" class="form-control" id="jumuah" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('prayerTimesForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const prayerTimes = {
+        fajr: document.getElementById('fajr').value,
+        sunrise: document.getElementById('sunrise').value,
+        dhuhr: document.getElementById('dhuhr').value,
+        asr: document.getElementById('asr').value,
+        maghrib: document.getElementById('maghrib').value,
+        isha: document.getElementById('isha').value,
+        jumuah: document.getElementById('jumuah').value
+      };
+
+      localStorage.setItem('prayerTimes', JSON.stringify(prayerTimes));
+      alert('Prayer times saved!');
+    });
+  </script>
+</body>
+</html>

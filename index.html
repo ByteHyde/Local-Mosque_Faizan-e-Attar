@@ -4,29 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="Logic.js"></script>  
-  <link rel="icon" type="image/x-icon" href="Images/icoin.png">
+  <link rel="icon" type="image/x-icon" href="Images/icon.png">
   <title>Faizan-e-Attar Musallah</title>
 </head>
 <body>
   <div class="preloader">
     <div class="loader">
-        <img src="Images/icon.png" alt="Logo">
-        <p class="preloader-text">Musallah Faizan-e-Attar</p>
-    </div>
+        <img src="Images/icoin.png" alt="Logo">
     </div>
   </div>
-  <header>
-   
-    <div class="logo-container">
-      <img src="Images/icoin.png" alt="Logo" id="logo">
-      <a href="index.html" class="logo"></a>
-    </div>
 
+  <header>
+    <div class="logo-container">
+      <img src="Images/icon - white text 1.png" alt="Logo" id="logo">
+    </div>
 
     <div class="clock-container">
       <div class="clock-text">
@@ -34,13 +26,13 @@
         <span>NEXT PRAYER:</span>
       </div>
       <div id="clock"></div>
+      <div id="next-prayer"></div>
+      <div id="next-prayer-time"></div>
     </div>
   </header>
 
   <nav class="nav-container"> 
     <ul class="nav-list">
-
-
       <li><a href="#">Home</a></li>
       <li class="dropdown"><a href="#">About Us</a>
         <ul class="dropdown-content">
@@ -48,9 +40,6 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </li>
-
-
-
       <li class="dropdown"><a href="#">Services</a>
         <ul class="dropdown-content">
           <li><a href="#">Weekly Ijtema</a></li>
@@ -64,81 +53,84 @@
           </li>
         </ul>
       </li>
-
     </ul>
   </nav>
 
   <main>
-    <div class="timetable-container">
-      <h2>Prayer Times</h2>
-      <div class="date-container"><div id="gregorian-date">May 16, 2024</div>
-        <div id="islamic-date">8 Dhū al-Qaʿda 1445</div>
-      </div>
-      <div class="next-prayer-container">
-        <div id="next-prayer">Fajr Iqamah</div>
-        <div id="next-prayer-time">4:45 am</div>
-        <div id="time-left">1 HOURS 24 minutes</div>
-      </div>
+    <div class="time-announce">
+      <div class="timetable-container">
+        <h2>Prayer Times</h2>
+        <div class="date-container">
+          <div id="gregorian-date">May 16, 2024</div>
+          <div id="islamic-date">8 Dhū al-Qaʿda 1445</div>
+        </div>
+        <div class="next-prayer-container">
+          <div id="next-prayer">Fajr Iqamah</div>
+          <div id="next-prayer-time">4:45 am</div>
+          <div id="time-left">1 HOURS 24 minutes</div>
+        </div>
 
-      
-      <table class="prayer-table">
-        <tr>
-          <th>Prayer</th>
-          <th>Athan</th>
-          <th>Iqamah</th>
-        </tr>
-        <tr>
-          <td>Fajr</td>
-          <td>3:42 am</td>
-          <td>4:45 am</td>
-        </tr>
-        <tr>
-          <td>Sunrise</td>
-          <td>5:41 am</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Dhuhr</td>
-          <td>1:26 pm</td>
-          <td>2:00 pm</td>
-        </tr>
-        <tr>
-          <td>Asr</td>
-          <td>5:37 pm</td>
-          <td>6:00 pm</td>
-        </tr>
-        <tr>
-          <td>Maghrib</td>
-          <td>9:12 pm</td>
-          <td>9:22 pm</td>
-        </tr>
-        <tr>
-          <td>Isha</td>
-          <td>11:00 pm</td>
-          <td>11:05 pm</td>
-        </tr>
-        <tr>
-          <td>Jumuah</td>
-          <td>1:45 pm</td>
-          <td>3:45 pm</td>
-        </tr>
-      </table>
-    </div>
+        <table class="prayer-table">
+          <tr>
+            <th>Prayer</th>
+            <th>Athan</th>
+            <th>Iqamah</th>
+          </tr>
+          <tr>
+            <td>Fajr</td>
+            <td>3:42 am</td>
+            <td>4:45 am</td>
+          </tr>
+          <tr>
+            <td>Sunrise</td>
+            <td>5:41 am</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Dhuhr</td>
+            <td>1:26 pm</td>
+            <td>2:00 pm</td>
+          </tr>
+          <tr>
+            <td>Asr</td>
+            <td>5:37 pm</td>
+            <td>6:00 pm</td>
+          </tr>
+          <tr>
+            <td>Maghrib</td>
+            <td>9:12 pm</td>
+            <td>9:22 pm</td>
+          </tr>
+          <tr>
+            <td>Isha</td>
+            <td>11:00 pm</td>
+            <td>11:05 pm</td>
+          </tr>
+          <tr>
+            <td>Jumuah</td>
+            <td>1:45 pm</td>
+            <td>3:45 pm</td>
+          </tr>
+        </table>
+      </div>
+      </div>
+      <div class="map-text">
+        <h1>Locate Us</h1>
+      </div>
+      <div class="map-box">
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d721.0997568299638!2d-79.34346092440147!3d43.70225596307571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cda16ef797b9%3A0xf2f476de1f174ace!2sMusallah%20faizan-e-attar!5e0!3m2!1sen!2sca!4v1715932126938!5m2!1sen!2sca" width="950" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> 
+      </div>
     
-    <div class="map-text">
-      <h1>
-        Locate Us
-      </h1>
-    </div>
-    <div class="map-box">
-      <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d721.0997568299638!2d-79.34346092440147!3d43.70225596307571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cda16ef797b9%3A0xf2f476de1f174ace!2sMusallah%20faizan-e-attar!5e0!3m2!1sen!2sca!4v1715932126938!5m2!1sen!2sca" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-   </div> 
-  </div>
   </main>
+
+  <footer>
+    <div class="footer-data">
+      <p>something in the bottom</p>
+      <a href="admin.html" class="admin-link" target="_blank">Admin Login</a>
+    </div>
+  </footer>
+  <script src="Logic.js"></script> 
 </body>
-<footer>
-  <div class="footer-data">
-    <p>somethin in the bottom </p>
-</footer>
 </html>
