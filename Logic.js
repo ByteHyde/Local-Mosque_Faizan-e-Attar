@@ -23,23 +23,28 @@ function updateClock() {
   var hours = now.getHours();      
   var minutes = now.getMinutes();
   var seconds = now.getSeconds();
-  hours = hours < 10 ? '0' + hours : hours;
-  minutes = minutes < 10 ? '0' + minutes : minutes;
-  seconds = seconds < 10 ? '0' + seconds : seconds;
+  // hours = hours < 10 ? '0' + hours : hours;
+  // minutes = minutes < 10 ? '0' + minutes : minutes;
+  // seconds = seconds < 10 ? '0' + seconds : seconds;
   // var currentTime = hours + ':' + minutes + ':' + seconds;
   var currentTime = hours * 60 + minutes;
-
 
   if(globalPrayerTIme){
     const [hour, minute] = globalPrayerTIme.split(':').map(Number);
     const counterInMinutes = hour * 60 + minute;    
-    const currentTimeInMinutes = currentTime
+    const timer = counterInMinutes - currentTime;
+    var timerInSeconds = new Date();
+    const seconds = timerInSeconds;
+    const iqamahTimeInHours = Math.floor(timer/60);
+    const iqamahTimeInMinutes = timer % 60;
+    const iqamahTimeInSeconds = 60 - seconds.getSeconds();
+    const iqamahTime = iqamahTimeInHours + ' Hrs' + ' : ' + iqamahTimeInMinutes +  ' Min ' + ' : ' + iqamahTimeInSeconds + 'Sec';
 
-    const timer = counterInMinutes - currentTimeInMinutes;
-  
-  document.getElementById('clock').innerHTML = timer;
+    document.getElementById('clock').innerHTML = iqamahTime;
 }
+
 }
+
 
 function getPrayerTimes() {
   const storedPrayerTimes = localStorage.getItem('prayerTimes');
@@ -66,7 +71,6 @@ function updateNextPrayer() {
 
   const times = [
     { name: 'Fajr', time: prayerTimes.fajr },
-    { name: 'Sunrise', time: prayerTimes.sunrise },
     { name: 'Dhuhr', time: prayerTimes.dhuhr },
     { name: 'Asr', time: prayerTimes.asr },
     { name: 'Maghrib', time: prayerTimes.maghrib },
@@ -103,5 +107,8 @@ function updateNextPrayer() {
 
 updateClock();
 updateNextPrayer();
-setInterval(updateClock, 1000); // Update clock every second
+// Update next prayer every second
+
+setInterval(updateClock, 1000); // Update next prayer every second
+
 setInterval(updateNextPrayer, 60000); // Update next prayer every minute
