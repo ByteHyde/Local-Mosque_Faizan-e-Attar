@@ -103,11 +103,20 @@ function updateNextPrayer() {
   document.getElementById('next-prayer-time').innerText = nextPrayerTime;
 }
 
-
+// import 'hijri-date';
+function Dates()
+{
+ const gregorianDate = new Date();
+ const gregDate = gregorianDate.toUTCString().split(' ').slice(0, 4).join(' ');
+//  const Hijridate = gregorianDate.toHijri();
+ document.getElementById('gregorian-date').innerHTML = gregDate;
+//  document.getElementById('islamic-date').innerHTML = Hijridate;
+}
 
 updateClock();
 updateNextPrayer();
 // Update next prayer every second
+Dates()
 
 setInterval(updateClock, 1000); // Update next prayer every second
 
