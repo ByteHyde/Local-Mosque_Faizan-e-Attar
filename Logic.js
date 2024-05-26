@@ -103,14 +103,21 @@ function updateNextPrayer() {
   document.getElementById('next-prayer-time').innerText = nextPrayerTime;
 }
 
-// import 'hijri-date';
 function Dates()
 {
  const gregorianDate = new Date();
  const gregDate = gregorianDate.toUTCString().split(' ').slice(0, 4).join(' ');
-//  const Hijridate = gregorianDate.toHijri();
+
+//  const hijriDate = new HijriDate();
+//  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+//  const months = ['Muharram', 'Safar', 'Rabi-ul-Awwal', 'Rabi-ul-Thani', 'Jumada al-Awwal', 'Jumada al-Thani', 'Rajab', 'Shaban', 'Ramadan', 'Shawwal', 'Dhul-Qadah', 'Dhul-Hijjah'];
+//  const hijriDayName = days[gregorianDate.getUTCDay()];
+//  const hijriDay = hijriDate.getDate();
+//  const hijriMonth = months[hijriDate.getMonth() - 1];
+//  const hijriYear = hijriDate.getFullYear()
+//  const hijriDateString = `${hijriDay} ${hijriMonth} ${hijriYear}`;
  document.getElementById('gregorian-date').innerHTML = gregDate;
-//  document.getElementById('islamic-date').innerHTML = Hijridate;
+//  document.getElementById('islamic-date').innerHTML = hijriDateString;
 }
 
 updateClock();
